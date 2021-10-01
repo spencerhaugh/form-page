@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ('./partials/head.ejs') %>
+  </head>
+  <body>
+    <main class="form-container">
+      <h2 class='title'>Sign up for email updates</h2>
+      <p class='required-msg'>*Indicates Required Field</p>
+      <form action="/" method="POST" id='form'>
+        <section class="row1">
+          <div class="form-item" id="form-firstName">
+            <label for="firstName" class="required">First Name</label>
+            <input type="text" name="firstName" id="firstName" required aria-required="true"/>
+          </div>
+          <div class="form-item" id="form-lastName">
+            <label for="lastName" class="required">Last Name</label>
+            <input type="text" name="lastName" id="lastName" required aria-required="true"/>
+          </div>
+        </section>
+        <section class="row2">
+          <div class="form-item" id="form-email">
+            <label for="email" class="required">Email Address</label>
+            <input type="email" name="email" id="email" placeholder="example@example.com" />
+          </div>
+          <div class="form-item" id="form-organization">
+            <label for="organization">Organization</label>
+            <input type="text" name="organization" id="organization" />
+          </div>
+        </section>
+        <section class="row3">
+          <div class="form-item" id="form-euResident">
+            <label for="euResident" class="required">EU Resident</label>
+            <select name="euResident" id="euResident">
+              <option value="">- select one -</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+        </section>
+        <section class="row4 boxes" id="checkboxes">
+          <label for="advances">
+            <input type="checkbox" id="advances" name="advances" />
+            <span class='checkbox-label'>Advances</span>
+          </label>
+          <label for="alerts">
+            <input type="checkbox" id="alerts" name="alerts" />
+            <span class='checkbox-label'>Alerts</span>
+          </label>
+          <label for="other">
+            <input type="checkbox" id="other" name="other" />
+            <span class='checkbox-label'>Other Communications</span>
+          </label>
+        </section>
+        <section class="row5 buttons">
+          <button type="submit" id="submit">SUBMIT</button>
+          <button id="reset">RESET</button>
+        </section>
+      <form>
+      </main>
+      <script src="script.js"></script>
+  </body>
+</html>

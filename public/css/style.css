@@ -1,0 +1,151 @@
+body {
+  font-family: 'Open Sans', Courier, monospace;
+}
+
+main {
+  /* width: 80%; */
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+.title {
+  font-weight: 800;
+  margin-bottom: 0;
+}
+
+.required-msg {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.form-container {
+  /* background: url('/css/texture.png'); */
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 2rem 1rem;
+}
+
+form {
+  color: #555;
+  margin-top: 2rem;
+  letter-spacing: 1px;
+}
+
+section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  /* margin-right: 1rem; */
+}
+
+label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  margin-right: 1rem;
+}
+
+select {
+  color: #555;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input,
+select {
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border: 3px solid rgb(187, 207, 207);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+input[type='text'],
+input[type='email'] {
+  min-width: 200px;
+}
+
+input.error,
+select.error {
+  border: 3px solid rgba(255, 0, 0, 0.5);
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+#checkboxes.error {
+  border: 2px solid red;
+}
+
+input[type='checkbox'] {
+  margin-right: 1rem;
+  padding: 1rem;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  max-width: 550px;
+  margin-top: 1rem;
+}
+
+.boxes label {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  min-width: 250px;
+  margin-bottom: 0;
+}
+
+button {
+  min-width: 120px;
+  padding: 0.7rem 1rem;
+  margin-right: 1rem;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+}
+
+button#submit {
+  background-color: rgb(126, 57, 126);
+  color: #eee;
+}
+
+button#reset {
+  background-color: white;
+  color: #555;
+}
+
+.buttons {
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+
+.errorMsg {
+  color: red;
+  font-size: 0.5rem;
+  margin-top: -0.6rem;
+}
+
+@media (max-width: 768px) {
+  section {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-item {
+    width: 90%;
+  }
+  button#reset {
+    margin-top: 0.5rem;
+  }
+}
