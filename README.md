@@ -8,5 +8,5 @@ Once valid, the submit button sends a POST request to the server with the inform
 
 ## Get started
 
-Run npm start in your terminal to start the server and view this page locally on localhost:3000.  
+Run npm install, followed by npm start in your terminal to start the server and view this page locally on localhost:3000.  
 The form will ruturn a success message in the console only if the form is valid and allowed to be submitted.
