@@ -1,11 +1,29 @@
+:root {
+  --main-theme-color: #eee;
+  --text-dark-color: #555;
+  --input-border: rgb(187, 207, 207);
+  --warning-color: red;
+  --input-error-border: rgba(255, 0, 0, 0.5);
+  --input-error-bg: rgba(255, 0, 0, 0.1);
+  --submit-btn: rgb(126, 57, 126);
+  --reset-btn: #fff;
+}
+
 body {
   font-family: 'Open Sans', Courier, monospace;
 }
 
 main {
-  /* width: 80%; */
   max-width: 550px;
   margin: 0 auto;
+}
+input:focus,
+select:focus {
+  outline: 2px solid var(--submit-btn);
+  outline-offset: -5px;
+}
+button:focus {
+  outline: 4px solid var(--input-border);
 }
 
 .title {
@@ -15,19 +33,19 @@ main {
 
 .required-msg {
   font-size: 0.8rem;
-  color: #555;
+  color: var(--text-dark-color);
 }
 
 .form-container {
   /* background: url('/css/texture.png'); */
-  background-color: #eee;
+  background-color: var(--main-theme-color);
   display: flex;
   flex-direction: column;
   padding: 0 1rem 2rem 1rem;
 }
 
 form {
-  color: #555;
+  color: var(--text-dark-color);
   margin-top: 2rem;
   letter-spacing: 1px;
 }
@@ -44,7 +62,6 @@ section {
   display: flex;
   flex-direction: column;
   width: 48%;
-  /* margin-right: 1rem; */
 }
 
 label {
@@ -55,7 +72,7 @@ label {
 }
 
 select {
-  color: #555;
+  color: var(--text-dark-color);
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -65,7 +82,7 @@ input,
 select {
   padding: 0.5rem 1rem;
   margin-bottom: 1rem;
-  border: 3px solid rgb(187, 207, 207);
+  border: 3px solid var(--input-border);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -76,17 +93,21 @@ input[type='email'] {
 
 input.error,
 select.error {
-  border: 3px solid rgba(255, 0, 0, 0.5);
-  background-color: rgba(255, 0, 0, 0.1);
+  border: 3px solid var(--input-error-border);
+  background-color: var(--input-error-bg);
 }
 
 #checkboxes.error {
-  border: 2px solid red;
+  border: 2px solid var(--warning-color);
 }
 
 input[type='checkbox'] {
   margin-right: 1rem;
   padding: 1rem;
+}
+
+input[type='checkbox']:hover {
+  cursor: pointer;
 }
 
 .boxes {
@@ -115,14 +136,18 @@ button {
   letter-spacing: 1px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 button#submit {
-  background-color: rgb(126, 57, 126);
-  color: #eee;
+  background-color: var(--submit-btn);
+  color: var(--main-theme-color);
 }
 
 button#reset {
-  background-color: white;
-  color: #555;
+  background-color: var(--reset-btn);
+  color: var(--text-dark-color);
 }
 
 .buttons {
@@ -131,7 +156,7 @@ button#reset {
 }
 
 .errorMsg {
-  color: red;
+  color: var(--warning-color);
   font-size: 0.5rem;
   margin-top: -0.6rem;
 }

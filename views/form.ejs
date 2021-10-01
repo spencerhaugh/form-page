@@ -11,21 +11,21 @@
         <section class="row1">
           <div class="form-item" id="form-firstName">
             <label for="firstName" class="required">First Name</label>
-            <input type="text" name="firstName" id="firstName" required aria-required="true"/>
+            <input type="text" name="firstName" id="firstName" autocomplete=”first-name required aria-required="true"/>
           </div>
           <div class="form-item" id="form-lastName">
             <label for="lastName" class="required">Last Name</label>
-            <input type="text" name="lastName" id="lastName" required aria-required="true"/>
+            <input type="text" name="lastName" id="lastName" autocomplete=”last-name” required aria-required="true"/>
           </div>
         </section>
         <section class="row2">
           <div class="form-item" id="form-email">
             <label for="email" class="required">Email Address</label>
-            <input type="email" name="email" id="email" placeholder="example@example.com" />
+            <input type="email" name="email" id="email" placeholder="example@example.com" autocomplete=”email” required aria-required="true"/>
           </div>
           <div class="form-item" id="form-organization">
             <label for="organization">Organization</label>
-            <input type="text" name="organization" id="organization" />
+            <input type="text" name="organization" id="organization" autocomplete=”organization”/>
           </div>
         </section>
         <section class="row3">
@@ -53,8 +53,8 @@
           </label>
         </section>
         <section class="row5 buttons">
-          <button type="submit" id="submit">SUBMIT</button>
-          <button id="reset">RESET</button>
+          <button type="submit" id="submit" aria-label="submit">SUBMIT</button>
+          <button id="reset" aria-label="reset">RESET</button>
         </section>
       <form>
       </main>
